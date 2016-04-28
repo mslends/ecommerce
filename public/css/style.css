@@ -1,0 +1,81 @@
+
+html , body {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.header {
+  height: 75px;
+  width: 100%;
+  background-color: grey;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.search {
+  height: 40px;
+  width: 350px;
+  /*font-size: 15px;*/
+}
+
+.addProductNameField {
+  height: 40px;
+  width: 350px;
+  /*font-size: 15px;*/
+}
+
+.addProductPriceField {
+  height: 40px;
+  width: 350px;
+  /*font-size: 15px;*/
+}
+
+.addProductButton {
+  height: 40px;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.productViewProducts {
+  width: 100%;
+  background-color: blue;
+  text-align: center;
+  font-size: 30px;
+}
+
+.adminProducts {
+  width: 100%;
+  background-color: red;
+  text-align: center;
+  font-size: 30px;
+}
+
+.editProductsSection {
+  width: 100%;
+  text-align: center;
+}
+
+.section2
+{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.section3
+{
+  width: 100%;
+  text-align: center;
+}

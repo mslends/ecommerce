@@ -1,0 +1,33 @@
+
+<section class="editProductsSection">
+
+  <!-- Buttons -->
+  <button ng-hide='addProductButton' ng-click='addProductButton = !addProductButton;  addProducts = !addProducts' class="addProductButton" type="button" name="button">Add Product</button>
+
+  <!-- Text inputs/ Search over products -->
+  <input class='search' type="text" name="name" placeholder="Search for a product">
+</section>
+
+<section class="section2">
+  <input ng-model='product.product' class="addProductNameField" ng-show='addProducts' type="text" name="name" placeholder="Add product name">
+</section>
+
+<section class="section3">
+  <input ng-model='product.price' class="addProductPriceField" ng-show='addProducts' type="text" name="name" placeholder="Add product price">
+  <button ng-show='addProducts' ng-click='addProductButton = !addProductButton; addProducts = !addProducts' class="addProductButton" type="button" name="button">Cancel</button>
+
+  <!-- Save New Product Button -->
+  <button ng-show='addProducts' ng-click='addProductButton = !addProductButton; addProducts = !addProducts; saveNewProduct(product)' class="addProductButton" type="button" name="button">Save New Product</button>
+</section>
+
+
+<div ng-repeat='product in products' class="adminProducts">
+  {{product.product}} {{product.price}}
+  <button ng-click='editButton = !editButton; editOptions = !editOptions' ng-hide='editButton' type="button" name="button">Edit Product</button>
+
+  <input ng-model='updatedProduct.product' ng-show='editOptions' type="text" name="name" placeholder="Edit Name">
+  <input ng-model='updatedProduct.price' ng-show='editOptions' type="text" name="name" placeholder="Edit Price">
+  <button ng-click='editButton = !editButton; editOptions = !editOptions' ng-show='editOptions' type="button" name="button">Cancel</button>
+  <button ng-click='editButton = !editButton; editOptions = !editOptions; updateProduct(updatedProduct, product)' ng-show='editOptions' type="button" name="button">Update</button>
+  <button ng-click='editButton = !editButton; editOptions = !editOptions; deleteProduct(product)' ng-show='editOptions' type="button" name="button">DELETE</button>
+</div>
